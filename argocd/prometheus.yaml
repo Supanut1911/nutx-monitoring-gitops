@@ -1,0 +1,29 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: prometheus
+  namespace: argocd
+spec:
+  project: dev-space
+  sources:
+  - repoURL: https://prometheus-community.github.io/helm-charts
+    chart: prometheus
+    targetRevision: 25.6.0
+    helm:
+      releaseName: prometheus
+      valueFiles:
+      - $values/config/prometheus/develop-prometheus-helm-values.yml
+  - repoURL: ""
+    targetRevision: HEAD
+    ref: values
+  destination:
+    name: mod-develop-2
+    namespace: mod-monitoring-dev
+  syncPolicy:
+    syncPolicy:
+    - CreateNamespace=true
+
+    automated:
+      prune: true
+      selfHeal: true
