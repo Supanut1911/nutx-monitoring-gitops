@@ -22,7 +22,7 @@ spec:
     namespace: monitoring-space
   syncPolicy:
     syncPolicy:
-    - CreateNamespace=true
+      - CreateNamespace=true
 
     automated:
       prune: true
