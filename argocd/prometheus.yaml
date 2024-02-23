@@ -9,12 +9,12 @@ spec:
   sources:
   - repoURL: https://prometheus-community.github.io/helm-charts
     chart: prometheus
-    targetRevision: 25.6.0
     path: /
+    targetRevision: 25.6.0
     helm:
-      releaseName: prometheus
+      # releaseName: prometheus
       valueFiles:
-      - ../config/prometheus/prometheus-helm-values.yml
+      - config/prometheus/prometheus-helm-values.yml
   - repoURL: https://github.com/Supanut1911/nutx-monitoring-gitops.git
     targetRevision: HEAD
     ref: values
