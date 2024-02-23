@@ -18,8 +18,8 @@ spec:
     targetRevision: HEAD
     ref: values
   destination:
-    name: mod-develop-2
-    namespace: mod-monitoring-dev
+    name: monitor
+    namespace: monitoring-space
   syncPolicy:
     syncPolicy:
     - CreateNamespace=true
