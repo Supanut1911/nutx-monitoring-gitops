@@ -14,7 +14,7 @@ spec:
       releaseName: prometheus
       valueFiles:
       - $values/config/prometheus/develop-prometheus-helm-values.yml
-  - repoURL: ""
+  - repoURL: https://github.com/Supanut1911/nutx-monitoring-gitops.git
     targetRevision: HEAD
     ref: values
   destination:
