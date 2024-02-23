@@ -9,7 +9,6 @@ spec:
   sources:
   - repoURL: https://prometheus-community.github.io/helm-charts
     chart: prometheus
-    path: /
     targetRevision: 25.6.0
     helm:
       # releaseName: prometheus
