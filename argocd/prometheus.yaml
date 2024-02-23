@@ -21,7 +21,7 @@ spec:
     name: monitor
     namespace: monitoring-space
   syncPolicy:
-    syncPolicy:
+    syncOptions:
       - CreateNamespace=true
 
     automated:
